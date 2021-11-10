@@ -1,0 +1,24 @@
+{
+  "name": "nixpkgs-backport-cost",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ckiee/nixpkgs-backport-cost.git",
+  "author": "ckie <git-525ff67@ckie.dev>",
+  "license": "MIT",
+  "bin": "dist/index.js",
+  "dependencies": {
+    "@octokit/rest": "^18.12.0",
+    "mathjs": "^10.0.0",
+    "pretty-ms": "^7.0.1",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  },
+  "scripts": {
+    "start": "ts-node src",
+    "postinstall": "tsc && sed -i '1i#!/usr/bin/env node' dist/index.js && chmod +x dist/index.js"
+  },
+  "devDependencies": {
+    "@types/mathjs": "^9.4.2",
+    "@types/node": "^16.11.7"
+  }
+}
